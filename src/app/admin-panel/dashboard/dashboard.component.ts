@@ -11,7 +11,7 @@ export class DashboardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log("git")
+    console.log('git');
   }
 
 }

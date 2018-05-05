@@ -4,9 +4,11 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AdminPanelComponent } from './admin-panel.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { ProfessorsListComponent } from './professors-list/professors-list.component';
-import { AddProfessorComponent } from './add-professor/add-professor.component';
-import { EditProfessorComponent } from './edit-professor/edit-professor.component';
+import { ProfessorsListComponent } from './professors/professors-list/professors-list.component';
+import { AddProfessorComponent } from './professors/add-professor/add-professor.component';
+import { EditProfessorComponent } from './professors/edit-professor/edit-professor.component';
+
+import { ProfessorService } from '../services/professor.service';
 
 @NgModule({
   imports: [
@@ -18,6 +20,10 @@ import { EditProfessorComponent } from './edit-professor/edit-professor.componen
           {
             path: 'dashboard',
             component: DashboardComponent
+          },
+          {
+            path: 'professors',
+            component: ProfessorsListComponent
           }
         ]
       },
@@ -25,10 +31,11 @@ import { EditProfessorComponent } from './edit-professor/edit-professor.componen
   ],
   declarations: [
     AdminPanelComponent,
-    DashboardComponent, 
+    DashboardComponent,
     ProfessorsListComponent,
-    AddProfessorComponent, 
-    EditProfessorComponent,     
-  ]
+    AddProfessorComponent,
+    EditProfessorComponent,
+  ],
+  providers: [ProfessorService],
 })
 export class AdminPanelModule { }

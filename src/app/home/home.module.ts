@@ -11,7 +11,7 @@ import { StudentsComponent } from './students/students.component';
     CommonModule,
     RouterModule.forRoot([
       { path: '',
-        component: HomeComponent, 
+        component: HomeComponent,
         children: [
           {
             path: 'students',
@@ -24,7 +24,7 @@ import { StudentsComponent } from './students/students.component';
   declarations: [
     HomeComponent,
     HomeContentComponent,
-    StudentsComponent, 
+    StudentsComponent,
   ]
 })
 export class HomeModule { }
