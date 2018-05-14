@@ -21,25 +21,16 @@
 								<th>Active</th>
 								<th></th>
 							</thead>
-							<tbody>
+							<tbody tr *ngFor="let prof of listOfProfessors">
 								<tr>	                                        	
-									<td>1</td>
-									<td>Teresa Carreño</td>
-									<td>15.234.234</td>
-									<td>55-55-55</td>
-									<td>asdas@asdasd.com</td>
+									<td>{{ prof.id }}</td>
+									<td>{{ prof.names }} {{ prof.lastnames }}</td>
+									<td>{{ prof.identification_number }}</td>
+									<td>{{ prof.phone }}</td>
+									<td>{{ prof.email }}</td>
 									<td>Yes</td>
-									<td><a href="#"><button class="btn btn-primary btn-round">Details</button></a></td>                         	
+									<td><a routerLink="/panel/edit-professor"><button class="btn btn-primary btn-round">Details</button></a></td>                         	
 								</tr> 
-									<tr>	                                        	
-									<td>1</td>
-									<td>Teresa Carreño</td>
-									<td>15.234.234</td>
-									<td>55-55-55</td>
-									<td>asdas@asdasd.com</td>
-									<td>No</td>
-									<td><a href="#"><button class="btn btn-primary btn-round">Details</button></a></td>                         	
-								</tr>                                        
 							</tbody>
 						</table>
 

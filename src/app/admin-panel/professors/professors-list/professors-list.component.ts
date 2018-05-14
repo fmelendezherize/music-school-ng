@@ -20,7 +20,7 @@ export class ProfessorsListComponent implements OnInit {
     this.showProfessors();
   }
 
-  showProfessors() {
+  private showProfessors() {
       this.professorService.getProfessors()
         .subscribe(data => {
             this.listOfProfessors = data;

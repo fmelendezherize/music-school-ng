@@ -7,6 +7,11 @@ export interface ProfessorResponse {
   id: string;
   names: string;
   lastnames: string;
+  identification_number: string;
+  phone: string;
+  address: string;
+  skills: string;
+  email: string;
 }
 
 @Injectable()
