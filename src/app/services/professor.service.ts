@@ -17,10 +17,17 @@ export interface ProfessorResponse {
 @Injectable()
 export class ProfessorService {
 
-  constructor(private http: HttpClient) { }
+  uri = 'http://127.0.0.1:8000/professors/';
+
+  constructor(private http: HttpClient) {}
 
   getProfessors(): Observable<ProfessorResponse[]> {
     return this.http
-      .get<ProfessorResponse[]>('http://127.0.0.1:8000/professors/', {responseType: 'json'});
+      .get<ProfessorResponse[]>(this.uri, {responseType: 'json'});
+  }
+
+  getProfessor(id) {
+    return this.http
+      .get<ProfessorResponse>(this.uri + id, {responseType: 'json'});
   }
 }

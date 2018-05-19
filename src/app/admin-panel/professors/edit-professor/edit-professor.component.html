@@ -5,16 +5,16 @@
 				<div class="card card-profile">
 					<div class="card-avatar">
 						<a href="#">
-							<img class="img" src="img/faces/teresa.jpg" />
+							<img class="img" src="assets/img/faces/teresa.jpg" />
 						</a>
 					</div>
 
 					<div class="content">
 						<h6 class="category text-gray">Professor</h6>
-						<h4 class="card-title">Teresa Carreño</h4>
+						<h4 class="card-title">{{ professor?.names || "No Registered" }} {{ professor?.lastnames }}</h4>
 						<p class="card-content">
-							<i class="material-icons">call</i> Phone: 555-555<br>
-							<i class="material-icons">email</i> Email: teresa@gmail.com<br>
+							<i class="material-icons">call</i> Phone: {{ professor?.phone }}<br>
+							<i class="material-icons">email</i> Email: {{ professor?.email }}<br>
 						</p>
 						<a href="#professor-reset" class="btn btn-info btn-round">Edit</a>
 						<a href="#" class="btn btn-danger btn-round">Delete</a>
@@ -25,7 +25,7 @@
 				<div class="card" id="professor-reset">
 					<div class="card-header" data-background-color="orange">
 						<h4 class="title">Courses</h4>
-						<p class="category">by Teresa Carreño</p>
+						<p class="category">by {{ professor?.names || "No Registered" }} {{ professor?.lastnames }}</p>
 					</div>
 					<div class="card-content table-responsive">
 						<table class="table table-hover">

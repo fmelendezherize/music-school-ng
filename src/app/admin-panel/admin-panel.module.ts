@@ -26,7 +26,7 @@ import { ProfessorService } from '../services/professor.service';
             component: ProfessorsListComponent
           },
           {
-            path: 'edit-professor',
+            path: 'edit-professor/:id',
             component: EditProfessorComponent
           }
         ]

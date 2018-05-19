@@ -12,7 +12,8 @@ import { HttpErrorResponse } from '@angular/common/http';
   encapsulation: ViewEncapsulation.None
 })
 export class ProfessorsListComponent implements OnInit {
-    listOfProfessors: ProfessorResponse[];
+
+  listOfProfessors: ProfessorResponse[];
 
   constructor(private professorService: ProfessorService) { }
 
